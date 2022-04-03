@@ -6,7 +6,57 @@
 <h1>Report</h1>
 <h2>Kmom01</h2>
 <p>
-
+    Då jag är helt ny inom programmeringsvärlden så är kursen OOPython det första jag kom i kontakt med gällande
+    objekt-relataterad programmering. Så jag har inga fler förkunskaper än det jag har lärt mig här på programmet.
+</p>
+<p>
+    Det krävs inte mycket för att skapa sina första klasser och objekt i PHP då mycket påminner om hur det fungerar i Python.
+    Största skillnaden som jag tror att jag kommer ha lite svårt med i början är att komma ihåg att skriva "new" vid skapandet
+    av varje nytt objekt, att man använder "->" i stället för en punkt som i Python och att man använder "this" och inte "self".
+    Sedan måste jag också komma ihåg att börja specificera vilka typer som t.ex. används som parametrar (t.ex. int, str) och det
+    ska bli väldigt intressant att börja testa runt med autoloader-funktionen som finns i PHP.
+</p>
+<p>
+    Exempel på en klass: <br>
+    <code>
+        class Test1 <br>
+        { <br>
+            private $name;<br>
+            private $city;<br>
+            <br>
+            public function __construct(string $name, string $city)<br>
+            {<br>
+                $this->name = $name;<br>
+                $this->city = $city;<br>
+            }<br>
+            <br>
+            public function about() <br>
+            {<br>
+                return "My name is {$this->name} and I live in {$this->city}."<br>
+            }<br>
+        }<br>
+        <br>
+        $alexis = new Test1("Alexis", "Helsingborg");<br>
+    </code>
+</p>
+<p>
+    Nu när vi snart har gått ett helt läsår så börjar den mesta syntaxen se "likadan" ut, det blir lättare att sätta sig
+    in i nya ramverk och det går lite snabbare att förstå koncepten. Det mesta börjar kännas logiskt och vikten av att
+    var sak har sin plats börjar jag nu inse. Så jag känner att strukturen är mer än överkomlig och det ska
+    bli roligt att se var den här kursen tar vägen!
+</p>
+<p>
+    Gällande "PHP The Right Way" så känns den just nu väldigt maffig men fylld med riktigt bra information. Jag tycker
+    att kapitlen gällande "Security" och "Databases" känns mest intressanta efter att ha skummat igenom några av dem. 
+    De som dock kan vara av extra stor vikt för en nybörjare tror jag är "Code Style Guide", "Language Highlights" och "Coding 
+    Practices". Personligen är jag mer intresserad av vad som händer bakom än det som visas på själva skärmen och därav blev jag
+    extra intresserad av de två kapitlen jag skrev ovan. 
+</p>
+<p>
+    Min TIL för detta kursmomentet är en så liten sak som att kunna starta en PHP-server via terminalen. Tidigare har jag gått 
+    via XAMPP men känns som att det nu är överflödigt? Eller behöver jag kanske ha XAMPP i bakgrunden för att kunna starta en 
+    PHP-server via terminalen? Har för mig att jag läste någonstans att PHP har en inbyggd webserver sedan några versioner 
+    tillbaka... Det här får jag kolla upp!
 </p>
 <h2>Kmom02</h2>
 <p>
@@ -30,6 +80,6 @@
 </p>
 <h2>Kmom07/10</h2>
 <p>
-    
+
 </p>
 {% endblock %}
