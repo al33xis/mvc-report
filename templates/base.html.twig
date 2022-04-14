@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="">
-        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="{{ asset("css/style.css") }}"/>
     </head>
     <body>
 
@@ -18,7 +18,8 @@
                     <li><a href="{{ url("home") }}">Home</a></li>
                     <li><a href="{{ url("about") }}">About</a></li>
                     <li><a href="{{ url("report") }}">Report</a></li>
-
+                    <li><a href="{{ url("form") }}">Form</a></li>
+                    <li><a href="{{ url("card") }}">Card</a></li>
                 </ul>
             </nav>
         </div>

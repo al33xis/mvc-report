@@ -31,4 +31,20 @@ class ReportController extends AbstractController
     {
         return $this->render('report.html.twig');
     }
+
+    /**
+     * @Route("/form", name="form")
+     */
+    public function form(): Response
+    {
+        return $this->render('form.html.twig');
+    }
+
+    /**
+     * @Route("/card", name="card")
+     */
+    public function card(): Response
+    {
+        return $this->render('card.html.twig');
+    }
 }
