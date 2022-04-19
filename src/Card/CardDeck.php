@@ -44,9 +44,45 @@ class CardDeck
         }
     }
 
-    public function showDeck()
+    public function removeCard($int)
     {
-        return $this->deck;
+        // Lägg in en check som gör så att man inte kan dra fler än vad
+        // som finns kvar
+        unset($this->deck[$int]);
+        array_values($this->deck);
+
+        return count($this->deck);
     }
+
+    public function showDeckList()
+    {
+        $deck_list = [];
+        foreach ($this->deck as $card) {
+            $deck_list[] = $card->printCard();
+        }
+        return $deck_list;
+    }
+
+    public function shuffleDeck()
+    {
+       $shuffle_list = $this->showDeckList();
+       shuffle($shuffle_list);
+
+       return $shuffle_list;
+    }
+
+    public function drawCard($number=1)
+    {
+        if (count($this->deck) == 0) {
+            $ret_value = 0;
+        } else {
+            $position = array_rand($this->deck, $number);
+            $card = $this->deck[$position]->printCard();
+            $ret_value = [$position, $card];
+        }
+
+        return $ret_value;
+    }
+
 }
 

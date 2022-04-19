@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card deck{% endblock %}
+
+{% block content %}
+
+
+
+<ul>
+    {% for card in shuffle_list %}
+        <li>{{ card }}</li>
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}
