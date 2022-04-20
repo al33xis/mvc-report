@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card deck{% endblock %}
+
+{% block content %}
+
+<h3>Players: {{ app.request.get('players') }}</h3>
+<h3>Cards left: {{ cards_left }}</h3>
+
+{% for player in game %}
+    <h2>New Player</h2>
+    {% for cards in player.showHand %}
+        {{ cards }}
+        <br>
+    {% endfor %}
+    <br>
+{% endfor %}
+
+
+
+{% endblock %}

@@ -2,13 +2,13 @@
 
 namespace App\Card;
 
-use \App\Card\Card;
+use App\Card\Card;
 
 class CardDeck
 {
-    private $deck = [];
+    protected $deck = [];
 
-    
+
     public function __construct()
     {
         $rep_values = [
@@ -22,7 +22,7 @@ class CardDeck
             "ace", "two", "three", "four", "five", "six",
             "seven", "eight", "nine", "ten", "jack", "queen", "king",
         ];
-        
+
         // Adding cards of Hearts
         for ($i = 0; $i < count($rep_values); $i++) {
             $this->deck[] = new Card($rep_values[$i], $rep_color[0], $rep_type[$i]);
@@ -46,8 +46,6 @@ class CardDeck
 
     public function removeCard($int)
     {
-        // Lägg in en check som gör så att man inte kan dra fler än vad
-        // som finns kvar
         unset($this->deck[$int]);
         array_values($this->deck);
 
@@ -65,13 +63,13 @@ class CardDeck
 
     public function shuffleDeck()
     {
-       $shuffle_list = $this->showDeckList();
-       shuffle($shuffle_list);
+        $shuffle_list = $this->showDeckList();
+        shuffle($shuffle_list);
 
-       return $shuffle_list;
+        return $shuffle_list;
     }
 
-    public function drawCard($number=1)
+    public function drawCard($number = 1)
     {
         if (count($this->deck) == 0) {
             $ret_value = 0;
@@ -83,6 +81,4 @@ class CardDeck
 
         return $ret_value;
     }
-
 }
-

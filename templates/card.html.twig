@@ -8,7 +8,10 @@
 <li><a href="{{ url("card-deck") }}">Deck</a></li>
 <li><a href="{{ url("shuffle-deck") }}">Deck shuffle</a></li>
 <li><a href="{{ url("draw-card") }}">Deck draw</a></li>
-
+<li><a href="{{ path("deal-card", {players: 3, cards: 4}) }}">Deal cards (3 players, 4 cards)</a></li>
+<li><a href="{{ url("card-deck2") }}">Deck 2</a></li>
+<li><a href="{{ url("card-json") }}">Deck JSON</a></li>
+<li><a href="{{ url("shuffle-json") }}">Deck Shuffle JSON</a></li>
 
 
 {% endblock %}
