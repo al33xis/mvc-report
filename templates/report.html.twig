@@ -59,8 +59,39 @@
     tillbaka... Det här får jag kolla upp!
 </p>
 <h2>Kmom02</h2>
-<p>
 
+<p>
+    För min del är det fortfarande lite "rörigt" om vad som är vad när det kommer till arv och komposition, det blir bättre men kommer nog ta lite tid.
+    Kortfattat så kan man förklara att arv är en relation som kan förklaras med är-en (is-a), alltså att en klass ärver från en annan (extends). Den nya klassen
+    får då tillgång till allt som finns i den ärvda klassen med hjälp av t.ex. "parent::" ("self::" används för att peka på den nya klassens variabler). 
+</p>
+<p>
+    Om vi sedan hoppar över till komposition som kan förklaras genom en relation som heter har-en (has-a) så handlar det om att en klass kan bestå av en 
+    annan klass. Det innebär att i konstruktorn så används den andra klassen i skapandet av det nya objektet. Vidare innebär det att objektet inte kan existera 
+    som ett fristående objekt, förstörs "basklassen" så förstörs även vårt objekt. Ett exempel är hur jag arbetar med Card-klassen i CardDeck, Card-klassen 
+    måste existera för att jag ska kunna skapa en kortlek.
+</p>
+<p>
+    Trait är något som kan användas för att utöka en klass med ytterligare metoder och variabler då PHP inte stödjer multipelt arv. Det fungerar nästan på 
+    samma sätt som arv men används inte riktigt på samma sätt "kodmässigt". En fördel att använda trait är när man har flera klasser som behöver använda samma metod,
+    i stället för att skriva/kopiera in koden i alla klasser så gör man ett Trait. Så vid eventuella ändringar så räcker det att uppdatera Traitet.
+</p>
+<p>
+    Kortfattat så är Interface ett "kontrakt" som innebär att allt som står i interfacet måste implementeras av klasserna som använder det. Man skriver ingen kod 
+    i "interface-klassen" och det finns heller inga variabler utan man skriver endast namnen på metoderna som måste finnas med.
+</p>
+<p>
+    Överlag så är jag nöjd med kmom02 och min prestation hittills, jag har redan hittat saker jag kan förbättra (skriva ut "riktiga" kort, återanvända kod, försöka en annan lösning
+    på hur jag ska skriva funktionen som löser player-delen m.fl.). Däremot så tycker jag att mina klasser än så länge är bra uppbyggda och lagom åtskilda och jag 
+    tycker nästan det är skönare med fler filer än mer kod i respektive fil. Med det sagt skulle jag även kunna dela upp koden som finns i CardDeckController i två filer. 
+    Tyvärr har jag hamnat lite efter men jobbar sakta och säkert igenom kursmomenten och uppgifterna.
+</p>
+<p>
+    Modelleringen och problemlösningen gör jag i nästa kmom. 
+</p>
+<p>
+    Min TIL för det här kursmomentet är hur "simpelt" det är att skicka JSON, trodde det var mer avancerat än så men tydligen inte... Nu är det endast enkla arrayer vi 
+    arbetar med, men känns ändå som att det är samma grund oavsett hur "avancerad" JSON-data man ska arbeta med.
 </p>
 <h2>Kmom03</h2>
 <p>
